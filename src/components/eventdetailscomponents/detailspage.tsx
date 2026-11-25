@@ -26,6 +26,7 @@ import SelectTicketBtn from "./selectTicketBtn";
 import SaveEventBtn from "./saveEventBtn";
 
 export default function DetailsPage(props: IEventType | any) {
+
     const {
         isOrganizer,
         eventMemberRole,
@@ -178,7 +179,7 @@ export default function DetailsPage(props: IEventType | any) {
                                         {!isOrganizer &&
                                             eventMemberRole !== "ADMIN" &&
                                             eventMemberRole !==
-                                                "COLLABORATOR" && (
+                                            "COLLABORATOR" && (
                                                 <PrBtn data={props} />
                                             )}
                                     </Flex>
@@ -210,7 +211,7 @@ export default function DetailsPage(props: IEventType | any) {
                                             p={"3"}
                                             borderWidth={
                                                 pathname?.includes("past") &&
-                                                !isOrganizer
+                                                    !isOrganizer
                                                     ? "0px"
                                                     : "1px"
                                             }
@@ -223,7 +224,7 @@ export default function DetailsPage(props: IEventType | any) {
                                             {!isOrganizer &&
                                                 eventMemberRole !== "ADMIN" &&
                                                 eventMemberRole !==
-                                                    "COLLABORATOR" &&
+                                                "COLLABORATOR" &&
                                                 !pathname?.includes("past") && (
                                                     <SelectTicketBtn
                                                         {...props}
@@ -275,7 +276,7 @@ export default function DetailsPage(props: IEventType | any) {
                                             p={"5"}
                                             borderWidth={
                                                 pathname?.includes("past") &&
-                                                !isOrganizer
+                                                    !isOrganizer
                                                     ? "0px"
                                                     : "1px"
                                             }
@@ -288,7 +289,7 @@ export default function DetailsPage(props: IEventType | any) {
                                             {!isOrganizer &&
                                                 eventMemberRole !== "ADMIN" &&
                                                 eventMemberRole !==
-                                                    "COLLABORATOR" &&
+                                                "COLLABORATOR" &&
                                                 !pathname?.includes("past") && (
                                                     <SelectTicketBtn
                                                         {...props}
